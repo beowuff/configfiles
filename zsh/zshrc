@@ -1,0 +1,38 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory autocd
+unsetopt beep extendedglob
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/beowuff/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+#allow tab completion in the middle of a word
+setopt COMPLETE_IN_WORD
+
+## for sharing history between zsh processes
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt hist_ignore_all_dups
+
+## never ever beep ever
+setopt NO_BEEP
+
+export HISTSIZE=2000
+export HISTFILE="$HOME/.history"
+export SAVEHIST=$HISTSIZE
+
+setopt correct
+
+# Prompt setup.
+export PS1=$'%{\033]0;%m\007%}%{\e[0;36m%}%* %{\e[1;32m%}%n%{\e[0;37m\%}@%{\e[1;34m%}%m %{\e[1;31m%} %~\n%{\e[0;37m%}%# '
+
+#Reverse history search
+bindkey '^R' history-incremental-search-backward
+

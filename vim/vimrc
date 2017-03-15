@@ -1,0 +1,53 @@
+set hlsearch
+set ruler
+syntax enable
+set tw=0 wrap linebreak
+:nnoremap <silent> <Space> :nohlsearch <Bar> :echo <CR>
+set tabstop=8
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smarttab
+set shiftround
+set nojoinspaces
+
+" From work box.
+" Standard vim options
+set autoindent
+set backspace=2
+set cindent
+set diffopt=filler,iwhite
+set foldcolumn=2
+set foldlevel=0
+set foldmethod=indent
+set guioptions-=m
+set guioptions-=T
+set hidden
+set history=100
+set ignorecase
+set incsearch
+set laststatus=2
+set matchtime=10
+set nobackup
+set nocompatible
+set nofen
+set notimeout
+set ttimeout
+set ttimeoutlen=100
+set scrolloff=1
+set showcmd
+set showmatch
+set textwidth=80
+set virtualedit=block
+set wildmenu
+"Longer Set options
+set cscopequickfix=s-,c-,d-,i-,t-,e-,g-,f-
+set listchars=tab:>-,trail:-
+set tags+=./.tags;/,./tags;/
+set whichwrap+=<,>,[,],h,l,~
+set wildmode=list:longest,full
+
+colorscheme darkblue
+syntax on
+scriptencoding utf-8
+set encoding=utf-8
